@@ -41,7 +41,6 @@ def create_app(db_url=None):
     jwt = JWTManager(app)
 
 
-
     # User logout - Blocklist Config
     @jwt.token_in_blocklist_loader
     def check_if_token_in_blocklist(jwt_header, jwt_payload):
